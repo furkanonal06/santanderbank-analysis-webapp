@@ -1,0 +1,110 @@
+/* General Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+/* Churn Analysis Grid */
+.churn-analysis {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+
+/* Generic Card Group Styling */
+.card-group {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Group Titles */
+.group-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Inner Card Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+/* Individual Cards */
+.card {
+    display: flex;
+    gap: 0px;
+    padding: 15px;
+    border: 0px solid #FFFFFF;
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: #ffffff;
+    overflow: hidden;
+    
+  }
+
+  .card .a{
+    background-color: #ffffff00;
+  }
+
+
+  .card-header {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically align icon and title */
+    background: none;
+    border: none; 
+    padding: 0px; 
+    margin-top: 3px; 
+    font-size: 12px;
+    color: #444;
+  }
+  
+  .card-title i {
+    font-size: 15px;
+    color: #444;
+    margin-top: 3px;
+    margin-right: 0px; 
+  }
+  
+  .kpi-value {
+    font-size: 25px;
+    font-weight: bold;
+    color: #0a0908;
+    text-align: left;
+  }
+
+.insights-markdown {
+    font-size: 10px; /* Example font size */
+    color: #333; /* Example text color */
+}
+
+.insights-markdown h2 {  /* Style the h2 elements */
+    color: #007bff; /* Example heading color */
+    font-size: 12px;  
+}
+
+.insights-markdown strong { /* Style the bold text */
+  color: #d9534f; /* Example color for emphasis */
+}
+
+/* Specific Grid Areas */
+.churn-kpi-container { grid-area: 1 / 1 / 3 / 2; }
+.churn-graph-container1 { grid-area: 1 / 2 / 3 / 4; }
+.churn-graph-container2 { grid-area: 1 / 4 / 3 / 6; }
+.behaviour-container { grid-area: 3 / 1 / 5 / 3; }
+.insight-container { grid-area: 3 / 3 / 5 / 6; }
