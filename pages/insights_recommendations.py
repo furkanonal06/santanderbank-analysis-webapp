@@ -1,6 +1,11 @@
 from dash import html
 
-layout = html.Div(className="page-content", children=[
+layout = layout = html.Div([
+    html.H1("Insights & Recommendations"),
+    html.P("🚧 Work in Progress 🚧"),
+]),
+
+html.Div(className="page-content", children=[
     html.Link(rel="stylesheet", href="/assets/insights.css"),
     html.Div(className="grid-container insights-actions", children=[
         
