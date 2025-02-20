@@ -32,7 +32,6 @@ layout = html.Div(className="page-content", children=[
         # KPI Container
         html.Div(className="card-group churn-kpi-container", children=[
             html.H3("Key Metrics", className="group-title"),
-            html.Div(className="cards-container", children=[
 
                 html.Div(className="card", children=[
                     html.Div(className="card-title", children=[
@@ -73,58 +72,57 @@ layout = html.Div(className="page-content", children=[
                     ]),
                     html.Div(total_customers_str, className="kpi-value")
                 ]),
-            ])
         ]),
 
         # First Graph Container
         html.Div(className="card-group churn-graph-container1", children=[
             html.H3("Churn Rate by Demographics", className="group-title"),
-            html.Div(className="cards-container", children=[
+
                 html.Div(className="card", children=[
                     html.P("by Geography"),
-                    html.Div(
-                        dcc.Graph(id="churn-rate-by-geography", config={"displayModeBar": False}, style={"width": "100%", "height": "100%"}, className="a")
+                    html.Div(   
+                        dcc.Graph(id="churn-rate-by-geography", config={"displayModeBar": False,}, style={"width": "100%", "height": "100%"})
                     )]),
+
                 html.Div(className="card", children=[
                     html.P("by Age Group"),
                     html.Div(
                         dcc.Graph(id="churn-rate-by-age", config={"displayModeBar": False}, style={"width": "100%", "height": "100%"})
                     )]),
+
                 html.Div(className="card", children=[
                     html.P("by Gender"),
                     html.Div(
                         dcc.Graph(id="churn-rate-by-gender", config={"displayModeBar": False}, style={"width": "100%", "height": "100%"})
                     )]),
-            ])
         ]),
 
         # Second Graph Container
         html.Div(className="card-group churn-graph-container2", children=[
             html.H3("Churn Rate by Product Usage", className="group-title"),
-            html.Div(className="cards-container", children=[
+
                 html.Div(className="card", children=[
                     html.P("by Activity"),
                     html.Div(
-                        dcc.Graph(id="churn-rate-by-activity", config={"displayModeBar": False})
+                        dcc.Graph(id="churn-rate-by-activity", config={"displayModeBar": False}, style={"width": "100%", "height": "100%"})
                     )]),
+
                 html.Div(className="card", children=[
                     html.P("by Product Number"),
                     html.Div(
-                        dcc.Graph(id="churn-rate-by-product", config={"displayModeBar": False})
+                        dcc.Graph(id="churn-rate-by-product", config={"displayModeBar": False}, style={"width": "100%", "height": "100%"})
                     )]),
-            ])
+        #     ])
         ]),
 
         # Behavior Analysis
         html.Div(className="card-group behaviour-container", children=[
             html.H3("Behavior Analysis", className="group-title"),
-            html.Div(className="cards-container", children=[     
                     html.Div(className="card", children=[
                     html.P("Important Factors for Customer Churn"),
                     html.Div(
                         dcc.Graph(id="feature-importances", config={"displayModeBar": False})
                     )]),
-            ])
         ]),
 
         # Insights
@@ -201,9 +199,6 @@ def update_geography(_):
                       yaxis_title=None,
                       title=None,
                       dragmode=False,
-
-                      width=325,
-                      height=150,
                       yaxis=dict(
                           showgrid=True,
                           zeroline=False,
@@ -236,9 +231,6 @@ def update_age_group(_):
                       yaxis_title=None,
                       dragmode=False,
                       title=None,
-
-                      width=325,
-                      height=150,
                       yaxis=dict(
                           showgrid=True,
                           zeroline=False,
@@ -271,9 +263,6 @@ def update_gender(_):
                       yaxis_title=None,
                       title=None,
                       dragmode=False,
-
-                      width=325,
-                      height=150,
                       yaxis=dict(
                           showgrid=True,
                           zeroline=False,
@@ -313,8 +302,6 @@ def update_activity(_):
                           ),
                           tickmode='array',
                           ),
-                      width=325,
-                      height=250,
                       yaxis=dict(
                           showgrid=True,
                           zeroline=False,
@@ -354,8 +341,6 @@ def update_prodcuct(_):
                           ),
                           tickmode='array',
                           ),
-                      width=325,
-                      height=250,
                       yaxis=dict(
                           tickfont=dict(
                               size=10,
@@ -403,8 +388,7 @@ def update_prodcuct(_):
                           ),
                           tickmode='array',
                           ),
-                      width=325,
-                      height=250,
+                          autosize=True,
                       yaxis=dict(
                           autorange="reversed",
                           tickfont=dict(

@@ -1,7 +1,6 @@
 /* General Grid Layout */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -21,10 +20,13 @@
 .card-group {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    padding: 20px;
     background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+    max-height: 100vh;
 }
 
 /* Group Titles */
@@ -35,19 +37,11 @@
     color: #444;
 }
 
-/* Inner Card Container */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    justify-content: start;
-    margin-top: 5px;
-}
-
 /* Individual Cards */
 .card {
     display: flex;
-    gap: 0px;
+    flex-direction: column;
+    gap: 10px;
     padding: 15px;
     border: 0px solid #FFFFFF;
     border-radius: 10px; 
@@ -55,51 +49,67 @@
     text-align: left;
     background-color: #ffffff;
     overflow: hidden;
+    border-radius: 10px !important;
     
   }
 
-  .card .a{
-    background-color: #ffffff00;
-  }
-
-
-  .card-header {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Vertically align icon and title */
-    background: none;
-    border: none; 
-    padding: 0px; 
-    margin-top: 3px; 
-    font-size: 12px;
-    color: #444;
-  }
-  
-  .card-title i {
-    font-size: 15px;
-    color: #444;
-    margin-top: 3px;
-    margin-right: 0px; 
-  }
-  
-  .kpi-value {
-    font-size: 25px;
-    font-weight: bold;
-    color: #0a0908;
-    text-align: left;
-  }
-
-.insights-markdown {
-    font-size: 10px; /* Example font size */
-    color: #333; /* Example text color */
+.card .js-plotly-plot {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.insights-markdown h2 {  /* Style the h2 elements */
-    color: #007bff; /* Example heading color */
-    font-size: 12px;  
+.card > div:last-child {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+  
+.card-header {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically align icon and title */
+  background: none;
+  border: none; 
+  padding: 0px; 
+  font-size: 12px;
+  color: #444;
+  gap: 8px;
+  margin:0;
 }
 
-.insights-markdown strong { /* Style the bold text */
-  color: #d9534f; /* Example color for emphasis */
+.card p {
+  margin: 0; 
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #444;
+}
+
+
+.card-title {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0a0908;
+  margin:0;
+  gap: 10px;
+}
+
+.card-title i {
+  font-size: 15px;
+  color: #444;
+  margin:0;
+}
+
+.kpi-value {
+  font-size: 25px;
+  font-weight: bold;
+  color: #0a0908;
+  text-align: left;
 }
 
 /* Specific Grid Areas */
