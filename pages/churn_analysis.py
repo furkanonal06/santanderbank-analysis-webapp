@@ -368,7 +368,7 @@ def update_prodcuct(_):
     Input("feature-importances", 'id')
 )
 def update_prodcuct(_):
-    feature_importance = pd.read_csv("data\raw-data\processed-data\feature_importance.csv")
+    feature_importance = pd.read_csv(r"data\raw-data\processed-data\feature_importance.csv")
     fig = px.bar(feature_importance, 
              x="Importance", 
              y="Feature", 
