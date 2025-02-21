@@ -362,13 +362,13 @@ def update_prodcuct(_):
                       )
     return fig
 
-# Callback for Churn Rate by Product
+# Callback for Feature Importances
 @callback(
     Output("feature-importances", "figure"),
     Input("feature-importances", 'id')
 )
 def update_prodcuct(_):
-    feature_importance = pd.read_csv(r"data\raw-data\processed-data\feature_importance.csv")
+    feature_importance = pd.read_csv("data\raw-data\processed-data\feature_importance.csv")
     fig = px.bar(feature_importance, 
              x="Importance", 
              y="Feature", 
