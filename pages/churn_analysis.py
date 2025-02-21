@@ -4,7 +4,7 @@ import numpy as np
 from dash import html, dcc, Input, Output, callback, State
 import plotly.express as px
 
-df = pd.read_csv("data/raw-data/processed-data/bank-data-processed.csv")
+df = pd.read_csv(r"data/processed-data/bank-data-processed.csv")
 
 
 # Create Age Groups
@@ -128,53 +128,53 @@ layout = html.Div(className="page-content", children=[
         # Insights
         html.Div(className="card-group insight-container", children=[
             html.H3("Insights", className="group-title"),
-            html.Div(className="card", children=[
+            html.Div(className="card insight", children=[
         
         # Insight 1: Age Matters
         html.Div([
             html.P("1. Age Matters", style={'color': '#3498db'}),
             html.P("- Younger customers (below 40) are more likely to leave, especially if they have a low balance or are inactive."),
             html.P("- Older customers (above 40) are more loyal, especially if they are active members or have a higher balance."),
-        ], style={'marginBottom': '5px'}),
+        ], style={"marginBottom": "2px"}),
         
         # Insight 2: Active Members Stay Longer
         html.Div([
             html.P("2. Active Members Stay Longer", style={'color': '#3498db'}),
-            html.P("- Customers who are **active members** are much less likely to leave the bank."),
-        ], style={'marginBottom': '5px'}),
+            html.P("- Customers who are active members are much less likely to leave the bank."),
+        ], style={"marginBottom": "2px"}),
         
         # Insight 3: Balance and Credit Score
         html.Div([
             html.P("3. Balance and Credit Score", style={'color': '#3498db'}),
-            html.P("- Customers with **low balances** (below 60,000) or **lower credit scores** (below 550) are more likely to leave, especially if they are younger."),
-        ], style={'marginBottom': '5px'}),
+            html.P("- Customers with low balances (below 60,000) or lower credit scores (below 550) are more likely to leave, especially if they are younger."),
+        ], style={'marginBottom': "2px"}),
         
         # Insight 4: Geography Plays a Role
         html.Div([
             html.P("4. Geography Plays a Role", style={'color': '#3498db'}),
-            html.P("- Customers from **Germany** are more likely to leave compared to those from Spain."),
-            html.P("- Customers from **Spain** are more loyal, especially if they are active members or have a higher balance."),
-        ], style={'marginBottom': '5px'}),
+            html.P("- Customers from Germany are more likely to leave compared to those from Spain."),
+            html.P("- Customers from Spain are more loyal, especially if they are active members or have a higher balance."),
+        ], style={'marginBottom': '2px'}),
         
         # Insight 5: Multiple Products Increase Loyalty
         html.Div([
             html.P("5. Multiple Products Increase Loyalty", style={'color': '#3498db'}),
             html.P("- Customers with more than one product (e.g., checking account and credit card) are less likely to leave."),
             html.P("- Customers with three or more products are even more loyal."),
-        ], style={'marginBottom': '5px'}),
+        ], style={'marginBottom': '2px'}),
         
         # Insight 6: Long-Term Customers Are Loyal
         html.Div([
             html.P("6. Long-Term Customers Are Loyal", style={'color': '#3498db'}),
             html.P("- Customers who have been with the bank for longer periods (e.g., more than 5 years) are less likely to leave."),
-        ], style={'marginBottom': '5px'}),
+        ], style={'marginBottom': '2px'}),
         
         # Insight 7: Credit Card Ownership Helps
         html.Div([
             html.P("7. Credit Card Ownership Helps", style={'color': '#3498db'}),
-            html.P("- Customers **without a credit card** are more likely to leave, especially if they are younger or have a low balance."),
-            html.P("- Customers **with a credit card** are more likely to stay, especially if they are active members."),
-        ], style={'marginBottom': '5px'}),
+            html.P("- Customers without a credit card are more likely to leave, especially if they are younger or have a low balance."),
+            html.P("- Customers with a credit card are more likely to stay, especially if they are active members."),
+        ], style={'marginBottom': '2px'}),
     ], style={}),
         ]),
 
@@ -368,7 +368,7 @@ def update_prodcuct(_):
     Input("feature-importances", 'id')
 )
 def update_prodcuct(_):
-    feature_importance = pd.read_csv(r"data\raw-data\processed-data\feature_importance.csv")
+    feature_importance = pd.read_csv(r"data\processed-data\feature_importance.csv")
     fig = px.bar(feature_importance, 
              x="Importance", 
              y="Feature", 
