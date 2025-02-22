@@ -121,7 +121,7 @@ layout = html.Div(className="page-content", children=[
                     html.Div(className="card", children=[
                     html.P("Important Factors for Customer Churn"),
                     html.Div(
-                        dcc.Graph(id="feature-importances", config={"displayModeBar": False})
+                        dcc.Graph(id="feature-importances", config={"displayModeBar": False}, style={"width": "100%", "height": "100%"})
                     )]),
         ]),
 
@@ -368,7 +368,7 @@ def update_prodcuct(_):
     Input("feature-importances", 'id')
 )
 def update_prodcuct(_):
-    feature_importance = pd.read_csv(r"data\processed-data\feature_importance.csv")
+    feature_importance = pd.read_csv(r"data/processed-data/feature_importance.csv")
     fig = px.bar(feature_importance, 
              x="Importance", 
              y="Feature", 
