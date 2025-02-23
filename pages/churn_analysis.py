@@ -125,8 +125,8 @@ layout = html.Div(className="page-content", children=[
                     )]),
         ]),
 
-        # Insights
-        html.Div(className="card-group insight-container", children=[
+        # Insights Part 1
+        html.Div(className="card-group insight-container1", children=[
             html.H3("Insights", className="group-title"),
             html.Div(className="card insight", children=[
         
@@ -155,7 +155,12 @@ layout = html.Div(className="page-content", children=[
             html.P("- Customers from Germany are more likely to leave compared to those from Spain."),
             html.P("- Customers from Spain are more loyal, especially if they are active members or have a higher balance."),
         ], style={'marginBottom': '2px'}),
-        
+    ]),
+        ]),
+
+        # Insights Part 2
+        html.Div(className="card-group insight-container2", children=[
+            html.Div(className="card insight", children=[
         # Insight 5: Multiple Products Increase Loyalty
         html.Div([
             html.P("5. Multiple Products Increase Loyalty", style={'color': '#3498db'}),
@@ -175,11 +180,11 @@ layout = html.Div(className="page-content", children=[
             html.P("- Customers without a credit card are more likely to leave, especially if they are younger or have a low balance."),
             html.P("- Customers with a credit card are more likely to stay, especially if they are active members."),
         ], style={'marginBottom': '2px'}),
-    ], style={}),
-        ]),
 
-    ])
-])
+    ]),
+        ]),
+    ]),
+]),
 
 # Callback for Churn Rate by Geography
 @callback(

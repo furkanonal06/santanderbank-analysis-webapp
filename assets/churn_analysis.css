@@ -117,4 +117,5 @@
 .churn-graph-container1 { grid-area: 1 / 2 / 3 / 4; }
 .churn-graph-container2 { grid-area: 1 / 4 / 3 / 6; }
 .behaviour-container { grid-area: 3 / 1 / 5 / 3; }
-.insight-container { grid-area: 3 / 3 / 5 / 6; }
+.insight-container1 { grid-area: 3 / 3 / 5 / 6; }
+.insight-container2 { grid-area: 5 / 1 / 7 / 6; } 
