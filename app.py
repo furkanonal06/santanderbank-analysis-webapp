@@ -67,7 +67,7 @@ app.layout = html.Div(className="dashboard-grid",children=[
                 className="sidebar-link",
                 href="/risk_analysis",
                 children=[
-                    html.I(className="  "),
+                    html.I(className="fa-solid fa-exclamation-triangle"),
                     html.Span("Risk Analysis", className="nav-item")
                 ]
             ),

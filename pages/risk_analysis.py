@@ -1,7 +1,7 @@
 from dash import html
 
 layout = html.Div([
-    html.H1("Insights & Recommendations"),
+    html.H1("Risk Analysis"),
     html.P("🚧 Work in Progress 🚧"),
 ]),
 
