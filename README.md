@@ -51,13 +51,14 @@ http://127.0.0.1:8050/
 
 ## **🔹 Project Structure**
 ```
-santanderbank-analysis-webapp/
-├── assets/                 # CSS files for styling
-├── models/                 # Machine learning models
-├── data/                   # Processed dataset (if applicable)
-├── app.py                  # Main dashboard application
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── utils.py                # Helper functions for model predictions
+📂 santanderbank-analysis-webapp/
+│
+├── 📂 assets/                 # CSS files for styling
+├── 📂 models/                 # Machine learning models
+├── 📂 data/                   # Processed dataset (if applicable)
+├── 📄 app.py                  # Main dashboard application
+├── 📄 requirements.txt        # Python dependencies
+├── 📄 README.md               # Project documentation
+└── 📄 utils.py                # Helper functions for model predictions
 ```
 
