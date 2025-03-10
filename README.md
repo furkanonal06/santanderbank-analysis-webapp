@@ -1,11 +1,11 @@
 # **Customer Churn Prediction & Segmentation Dashboard**
 
-🚀 **An interactive web app for customer churn prediction and risk analysis** 🚀
+**An interactive web app for customer churn prediction and risk analysis**
 
 This project is a **data-driven dashboard** designed to help **Santander Bank** analyze customer churn and implement an **early warning system** to identify at-risk customers. The app integrates **machine learning models** for **churn prediction and customer segmentation**, providing actionable insights for retention strategies.
 
-## **🔹 Live Demo**
-🌍 **[Santander Bank Churn Analysis Web App](https://santanderbank-analysis-webapp.onrender.com/)**
+## **🔹 Live Dashboard**
+**[Santander Bank Churn Analysis Web App](https://santanderbank-analysis-webapp.onrender.com/)**
 
 ## **🔹 Key Features**
 ✅ **Churn Prediction Model**: Uses an **XGBoost model** to estimate churn probability for each customer  
