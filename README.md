@@ -22,7 +22,7 @@ This project is a **data-driven dashboard** designed to help **Santander Bank** 
 - Pandas & NumPy
 
 ## **🔹 Data Preprocessing & Analysis**
-The dataset was preprocessed and analyzed in a separate **GitHub repository**, which includes:  
+The dataset was preprocessed and analyzed in a separate **GitHub repository**, which can be accessed here: 
 📂 **[Santander Churn Data Analysis Repo](https://github.com/furkanonal06/santanderbank-analysis)**
 
 ## **🔹 Installation & Usage**
