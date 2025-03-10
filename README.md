@@ -55,7 +55,7 @@ http://127.0.0.1:8050/
 │
 ├── 📂 assets/                 # CSS files for styling
 ├── 📂 models/                 # Machine learning models
-├── 📂 data/                   # Processed dataset (if applicable)
+├── 📂 data/                   # Processed dataset
 ├── 📄 app.py                  # Main dashboard application
 ├── 📄 requirements.txt        # Python dependencies
 ├── 📄 README.md               # Project documentation
